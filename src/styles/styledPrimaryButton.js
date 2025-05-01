@@ -2,7 +2,7 @@
 
 import styled from "styled-components";
 
-export const StyledPrimaryButton = styled.button`
+export const StyledPrimaryButton = styled.input`
     height: 45px;
     border-radius: var(--Rounded);
     border:none;
