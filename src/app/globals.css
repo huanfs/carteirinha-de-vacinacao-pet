@@ -15,6 +15,25 @@
   --Roboto: 'Roboto', sans-serif;
   --Font-darken: "700";
   --Fonth-lighteen: "300";
+  --Text-size: 16px;
+  --Title-size: 2.5em;
+  --Subtitle-size: 1.5em;
+
+  /*Commons decorations*/
+  --Soft-rounded: 5px;
+  --Rounded: 10px;
+  --Lighteen: brightness(1.4);
+  --Darken: brightness(0.8);
+  --Shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+  /*Spaces*/
+  --Space-short: 1em;
+  --Space-moderate: 50px;
+  --Inner-space: 2em;
+
+  /*Animations*/
+  --Short: 300ms;
+  --Long: 1s;
 }
 
 *{
@@ -23,12 +42,49 @@
   box-sizing:border-box;
 }
 
-body, #root{
+body{
   width:100vw;
   height:100vh;
+  display:grid;
+  place-items:center;
 }
 
 .container{
   width:375px;
   height:800px;
+  border:1px solid red;
+}
+
+/*Animations*/
+@keyframes animation-move-from-left{
+  from{
+    margin-left:-375px;
+  }
+  to{
+    margin-left:0;
+  }
+}
+@keyframes animation-move-from-right{
+  from{
+    margin-right:-375px;
+  }
+  to{
+    margin-left:0;
+  }
+}
+@keyframes animation-appear{
+  from{
+    opacity:0;
+  }
+  to{
+    opacity:1;
+  }
+}
+@keyframes animation-disapear{
+  from{
+    opacity:1;
+  }
+  to{
+    opacity:0;
+  }
 }

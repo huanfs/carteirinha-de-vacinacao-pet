@@ -1,7 +1,7 @@
-
+import HomeScreen from "@templates/homeScreen";
 
 export default function Home(){
   return(
-    <h1>Carteirinha de vacinação pet: page.js</h1>
+    <HomeScreen/>
   )
 };

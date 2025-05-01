@@ -1,1 +1,3 @@
-instalar dependenciar, criar primeiro commit, instalar o zustand
+instalar zustand
+
+so criei o input e o botão
