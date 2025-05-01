@@ -8,6 +8,8 @@ import Title from "@atoms/title";
 
 import FormButtonsSection from "@molecules/formButtonsSection";
 
+import Form from "@organisms/form";
+
 import {StyledHomeScreen} from "@styles/styledHomeScreen";
 
 function HomeScreen(){
@@ -18,7 +20,9 @@ function HomeScreen(){
         <StyledHomeScreen>
             <Title value="Carteirinha de vacinação pet"/>
             <FormButtonsSection/>
-        {/*IMPORTAR O FORMULÁRIO*/}
+        {
+            option !== "" && <Form/>
+        }
         </StyledHomeScreen>
     )
 };

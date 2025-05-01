@@ -1,5 +1,3 @@
-instalar zustand
+criei o formulário e a logica, ainda não fiz o commit
 
-so criei o input e o botão
-
-CRIAR E IMPOPRTAR O FORMULÁRIO EM HOMESCREEN
+**resolver a posição do botão close**
