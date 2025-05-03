@@ -7,7 +7,7 @@ function Input({type, placeholder, action}){
         <StyledInput
             type={type}
             placeholder={placeholder}
-            onChange={()=>{action ? action : null}}
+            onChange={(event)=>{action && action(event.target.value)}}
         />
     )
 };
