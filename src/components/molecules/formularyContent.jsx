@@ -6,7 +6,7 @@ import Subtitle from "@atoms/subtitle";
 
 import Input from "@atoms/input";
 
-import PrimaryButton from "@atoms/primaryButton";
+import FormularyButton from "@atoms/formularyButton";
 
 import useFormOption from "@store/useFormOption";
 
@@ -28,7 +28,10 @@ function FormularyContent(){
             {
                 option === "registrar" && <Input type="password" placeholder="confirmar senha" action={setConfirmPassword}/>
             }
-            <PrimaryButton value={option}/>
+            <FormularyButton 
+                value={option}
+                user={{name: name, password: password, confirm: confirmPassword}}
+            />
         </StyledFormularyContent>
     )
 };

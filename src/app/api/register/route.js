@@ -11,11 +11,21 @@ export async function POST(request){
 
         if(!register){
             console.log("Não foi possível criar o usuário")
-            return new Response(JSON.stringify({message: `Não foi possível criar este usuário`}))
+            return new Response(JSON.stringify({message: `Não foi possível criar este usuário`}),{
+                status:400,
+                headers:{
+                    "Content-Type": "aplication/json"
+                }
+            })
         }
         if(register){
             console.log("Usuário criado com sucesso")
-            return new Response(JSON.stringify({message: `usuário foi registrado com sucesso`}))
+            return new Response(JSON.stringify({message: `usuário foi registrado com sucesso`}),{
+                status:200,
+                headers:{
+                    "Content-Type": "application/json"
+                }
+            })
         }
     }
     catch(err){
