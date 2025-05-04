@@ -9,6 +9,7 @@
   --Soft-green: #81B45A;
   --Soft-red: #de5858;
   --Very-dark-brown: #292222;
+  --Transparence: rgba(255, 255, 255, 0.5);
 
   /*Font style*/
   --Pacifico: 'Pacifico', coursive;
