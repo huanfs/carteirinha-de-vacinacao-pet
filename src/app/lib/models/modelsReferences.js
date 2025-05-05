@@ -1,13 +1,14 @@
-import { Usuarios } from "@/app/lib/models/usuarios.js";
-import { Animais } from "@lib/models/animais.js";
-import { Vacinas } from "@lib/models/vacinas.js";
+import { Sequelize } from "sequelize";
+import { Usuarios } from "./usuarios.js";
+import { Animais } from "./animais.js";
+import { Vacinas } from "./vacinas.js";
 
-// Um usuário pode ter muitos animais
-Usuarios.hasMany(Animais, { foreignKey: "usuarioId" });
-Animais.belongsTo(Usuarios, { foreignKey: "usuarioId" });
+// Relacionamentos
+Usuarios.hasMany(Animais, { foreignKey: "usuarioId", as: "animais" });
+Animais.belongsTo(Usuarios, { foreignKey: "usuarioId", as: "usuario" });
 
-// Um animal pode ter muitas vacinas
-Animais.hasMany(Vacinas, { foreignKey: "animalId" });
-Vacinas.belongsTo(Animais, { foreignKey: "animalId" });
+Animais.hasMany(Vacinas, { foreignKey: "animalId", as: "vacinas" });
+Vacinas.belongsTo(Animais, { foreignKey: "animalId", as: "animal" });
 
+// Exportar modelos já relacionados
 export { Usuarios, Animais, Vacinas };
