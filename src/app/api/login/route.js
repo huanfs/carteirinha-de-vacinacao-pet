@@ -9,8 +9,8 @@ export async function POST(request){
         if(auth){
             return new Response(
                 JSON.stringify({message:`Usuário foi encontrado no banco de dados`}),{
+                    status:200,
                     headers:{
-                        status:200,
                         "Content-Type":"application/json",
                     }
                 }
@@ -19,8 +19,8 @@ export async function POST(request){
         if(!auth){
             return new Response(
                 JSON.stringify({message:`Usuário não foi encontrado`}),{
+                    status:400,
                     headers:{
-                        status:400,
                         "Content-Type":"application/json",
                     }
                 }
