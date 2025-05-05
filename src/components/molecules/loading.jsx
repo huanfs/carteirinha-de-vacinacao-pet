@@ -47,6 +47,9 @@ function Loading(){
                     alt="patinha de cachorro"
                     style={{display: count > 0 ? 'flex' : 'none', transform:'rotate(-50deg)', marginLeft:'-20px'}}
                 />
+                <span>
+                    carregando...
+                </span>
             </div>
         </StyledLoading>
     )
