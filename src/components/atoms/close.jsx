@@ -14,8 +14,8 @@ function Close(){
                 color:'var(--Soft-red)', 
                 transform:'scale(1.5,1.5',
                 position:'relative',
-                top:'15%',
-                left:'15%',
+                top:'5rem',
+                left:'3rem',
             }}
             onClick={() => setOption("")}
         />
