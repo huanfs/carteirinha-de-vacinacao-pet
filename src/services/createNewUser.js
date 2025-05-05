@@ -2,7 +2,7 @@
 
 import axios from "axios";
 
-export async function CreateNewUser(name, password, push){
+export async function CreateNewUser(name, password, push, setLoading){
 
     try{
         const response = await axios.post("http://localhost:3000/api/register",{name: name, password: password});
@@ -16,6 +16,9 @@ export async function CreateNewUser(name, password, push){
     }
     catch(err){
         console.log("houve um erro na requisição: ", err)
+    }
+    finally{
+        setLoading(false);
     }
 };
 

@@ -16,7 +16,15 @@ import StatusMessage from "@atoms/statusMessage";
 
 import {StyledHomeScreen} from "@styles/styledHomeScreen";
 
+
+/*para teste do loading*/
+import useLoading from "@store/useLoading";
+import Loading from "@molecules/loading";
+
 function HomeScreen(){
+
+    /*para teste do loading*/
+    const {loading, setLoading} = useLoading();
 
     const {option, setOption} = useFormOption();
 
@@ -24,6 +32,9 @@ function HomeScreen(){
 
     return(
         <StyledHomeScreen>
+            {
+                loading && <Loading/>
+            }
             {
                 message != "" && <StatusMessage/>
             }

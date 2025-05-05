@@ -1,18 +1,23 @@
 "use client";
 
 import useStatusMessage from "@store/useStatusMessage";
+import useLoading from "@store/useLoading";
 
 import {CreateNewUser} from "@services/createNewUser";
 
-export function IsValidCredentialsFormat(name, password, confirm, method, push){
 
+export async function IsValidCredentialsFormat(name, password, confirm, method, push){
+    
     const {setMessage} = useStatusMessage.getState();
+    const {setLoading} = useLoading.getState();
+
+    setLoading(true);
 
     if(name.length < 6){
         setMessage("usuário deve ter ao menos 6 caracteres");
     }
     if(password.length < 8){
-        setMessage("senha deve ter ao menos 8 caracteres")
+        setMessage("senha deve ter ao menos 8 caracteres");
     }
     if(method === "entrar"){
         console.log("metodo entrar");
@@ -21,10 +26,10 @@ export function IsValidCredentialsFormat(name, password, confirm, method, push){
     else if(method === "registrar"){
         console.log("metodo registrar");
         if(password != confirm){
-            setMessage("as senhas não conferem")
+            setMessage("as senhas não conferem");
         }
         else{
-            CreateNewUser(name, password, push);
+            CreateNewUser(name, password, push, setLoading);
         }
     }
 }
