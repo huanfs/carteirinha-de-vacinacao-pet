@@ -14,6 +14,9 @@ export const StyledNotDataFound = styled.article`
     background-color: var(--Soft-gray);
     position:relative;
     top:3%;
+    animation-name: animation-move-from-right;
+    animation-iteration-count:1;
+    animation-duration var(--Short);
 
         & p{
             width:80%;
