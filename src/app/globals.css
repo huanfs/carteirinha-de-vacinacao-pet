@@ -9,6 +9,7 @@
   --Soft-green: #81B45A;
   --Soft-red: #de5858;
   --Very-dark-brown: #292222;
+  --Soft-gray: rgba(255, 255, 255, 0.8);
   --Transparence: rgba(255, 255, 255, 0.5);
 
   /*Font style*/
@@ -23,7 +24,7 @@
   /*Commons decorations*/
   --Soft-rounded: 5px;
   --Rounded: 10px;
-  --Lighteen: brightness(1.4);
+  --Lighteen: brightness(1.1);
   --Darken: brightness(0.8);
   --Shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 

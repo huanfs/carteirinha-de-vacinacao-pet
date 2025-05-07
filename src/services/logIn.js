@@ -8,7 +8,7 @@ export async function LogIn(name, password, push, setLoading){
         if(response){
             console.log("aqui está a responsta ", response.data);
             sessionStorage.setItem("animais", response.data.animais); //SALVA A LISTA DE ANIMAIS NA SEÇÃO
-            //push("/main");
+            push("/main");
         }
         else{
             console.log("erro com a requisição ", response);
