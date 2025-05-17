@@ -18,11 +18,10 @@ export const StyledMainApp = styled.main`
             z-index: 0;
         }
 
-        & section {
+        & > section {
             height:100%;
             position: relative;
             z-index: 1;
-            border: 1px solid blue;
             display: flex;
             flex-direction: column;
             align-items: center;
