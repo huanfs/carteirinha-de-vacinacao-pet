@@ -22,7 +22,7 @@ function AddPet({action}){
     const[age, setAge] = useState("");
     const[weight, setWeight] = useState("");
 
-    const{vaccineList} = useVaccineList(); //*trabalhando aqui*/
+    const{vaccineList} = useVaccineList();
 
     return(
         <StyledAddPet>
