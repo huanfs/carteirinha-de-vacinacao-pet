@@ -5,4 +5,4 @@ corrigir o efeito de loading que está ocorrendo de forma errada
 
 criar a lógica de adicionar o novo pet
 
-criar o componente de botão com informação da vacina
+no componente addPet criar a logica pra enviar as informações ao banco de dados para salvar o novo animal e a nova vacina
